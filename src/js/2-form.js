@@ -36,7 +36,7 @@ function populateForm() {
 function handleSubmit(event) {
   event.preventDefault();
   if (formData.email === '' || formData.message === '') {
-    alert('«Fill please all fields»');
+    alert('«Please fill all fields»');
   } else {
     console.log(formData);
     formData.email = '';
