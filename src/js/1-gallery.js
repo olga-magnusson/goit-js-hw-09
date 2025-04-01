@@ -85,6 +85,6 @@ function createGalleryItem(arrImage) {
 }
 
 const lightbox = new SimpleLightbox('.gallery a', {
-    captionsDate: 'alt',
+    captionsData: 'alt',
     captionDelay: 250
 });

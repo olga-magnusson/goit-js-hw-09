@@ -1,4 +1,4 @@
-const formData = {
+let formData = {
   email: '',
   message: '',
 };
@@ -27,7 +27,9 @@ populateForm();
 function populateForm() {
   const savedForm = localStorage.getItem(STORAGE_KEY);
   if (savedForm) {
-    formData = { ...JSON.parse(savedForm) };
+      const savedData = JSON.parse(savedForm);
+      formData.email = savedData.email;
+      formData.message = savedData.message;
     textArea.value = formData.message;
     emailInput.value = formData.email;
   }
